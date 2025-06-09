@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Confeitaria Rosa</title>
+<style>
+:root {
+--rosa-claro: #ffe6ea;
+--rosa-medio: #ff99b8;
+--rosa-escuro: #ff4d85;
+--cinza-claro: #f5f5f5;
+--cinza-texto: #333333;
+--branco: #ffffff;
+}
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family: 'Helvetica', sans-serif; background: var(--cinza-claro); color: var(--cinza-texto); }
+header {
+background: var(--rosa-medio);
+padding: 1rem 2rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+header h1 { font-family: 'Pacifico', cursive; color: var(--branco); font-size: 1.8rem; }
+nav a {
+color: var(--branco);
+text-decoration: none;
+margin-left: 1.5rem;
+font-size: 1rem;
+transition: opacity .2s;
+}
+nav a:hover { opacity: 0.8; }
+.hero {
+background: url('https://via.placeholder.com/1200x500.png?text=Bolo+Rosa+Delícia') center/cover no-repeat;
+height: 60vh;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+color: var(--branco);
+position: relative;
+}
+.hero::after {
+content:'';
+position:absolute;top:0;left:0;width:100%;height:100%;
+background: rgba(0,0,0,0.3);
+}
+.hero .texto {
+position: relative;
+z-index: 1;
+max-width: 90%;
+}
+.hero h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+.hero a {
+padding: .8rem 1.8rem;
+background: var(--rosa-escuro);
+color: var(--branco);
+text-decoration: none;
+font-size: 1.1rem;
+border-radius: 4px;
+}
+main { padding: 2rem;}
+.produtos {
+display: grid;
+gap: 1.5rem;
+grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+}
+.card {
+background: var(--branco);
+border-radius: 8px;
+overflow: hidden;
+box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+transition: transform .2s;
+}
+.card:hover { transform: translateY(-5px); }
+.card img { width:100%; height:180px; object-fit: cover; }
+.card-body { padding: 1rem; }
+.card-body h3 { color: var(--rosa-escuro); margin-bottom: .5rem; }
+.card-body p { font-size: .9rem; margin-bottom: .8rem; }
+.card-body a {
+display: inline-block;
+background: var(--rosa-medio);
+color: var(--branco);
+padding: .5rem 1rem;
+text-decoration: none;
+border-radius: 4px;
+font-size: .9rem;
+}
+.sobre {
+margin: 3rem 0;
+text-align: center;
+}
+.sobre h2 { color: var(--rosa-escuro); margin-bottom: .5rem; }
+.sobre p { max-width: 800px; margin: auto; line-height: 1.6; }
+footer {
+background: var(--rosa-medio);
+color: var(--branco);
+text-align: center;
+padding: 1.5rem;
+margin-top: 2rem;
+}
+footer .social a img {
+width: 28px;
+margin: 0 .5rem;
+filter: brightness(0) invert(1);
+vertical-align: middle;
+}
+footer p { font-size: .9rem; }
+</style>
+</head>
+<body>
+
+<header>
+<h1>Confeitaria Rosa</h1>
+<nav>
+<a href="#produtos">Produtos</a>
+<a href="#sobre">Sobre</a>
+<a href="#contato">Contato</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="texto">
+<h2>Doces e Bolos Feitos com Amor 💕</h2>
+<a href="#produtos">Ver Delícias</a>
+</div>
+</section>
+
+<main>
+<section id="produtos" class="produtos">
+<div class="card">
+<img src="https://via.placeholder.com/400x300.png?text=Bolo+Morango" alt="Bolo de Morango">
+<div class="card-body">
+<h3>Bolo de Morango</h3>
+<p>Camadas de massa fofinha com creme e morangos frescos.</p>
+<a href="#">Peça Agora</a>
+</div>
+</div>
+<div class="card">
+<img src="https://via.placeholder.com/400x300.png?text=Cupcakes+Rosa" alt="Cupcakes">
+<div class="card-body">
+<h3>Cupcakes</h3>
+<p>Docinhos individuais com cobertura colorida e delicada.</p>
+<a href="#">Peça Agora</a>
+</div>
+</div>
+<div class="card">
+<img src="https://via.placeholder.com/400x300.png?text=Bolo+Grande" alt="Bolo Grande">
+<div class="card-body">
+<h3>Bolo Festa</h3>
+<p>Bolos personalizados para aniversários e eventos especiais.</p>
+<a href="#">Peça Agora</a>
+</div>
+</div>
+</section>
+
+<section id="sobre" class="sobre">
+<h2>Quem Somos</h2>
+<p>
+Na Confeitaria Rosa, acreditamos que cada bolo é uma celebração. Usamos ingredientes fresquinhos, muita criatividade e carinho em cada preparo, para entregar não só um doce, mas uma experiência inesquecível.
+</p>
+</section>
+</main>
+
+<footer id="contato">
+<p>Siga-nos nas redes sociais:</p>
+<div class="social">
+<a href="#"><img src="https://via.placeholder.com/28/ffffff?text=F" alt="Facebook"></a>
+<a href="#"><img src="https://via.placeholder.com/28/ffffff?text=I" alt="Instagram"></a>
+<a href="#"><img src="https://via.placeholder.com/28/ffffff?text=W" alt="WhatsApp"></a>
+</div>
+<p>&copy; 2025 Confeitaria Rosa • Contato: (11) 91234‑5678</p>
+</footer>
+
+</body>
+
+</html>
